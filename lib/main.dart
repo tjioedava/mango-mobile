@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/menu.dart';
+import 'package:myapp/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
             seedColor: const Color.fromARGB(255, 50, 78, 189)),
         useMaterial3: true,
       ),
-      home: MyHomePage(title: 'Mango E-Commerce'),
+      home: Home(),
     );
   }
 }
