@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/screens/home.dart';
+import 'package:myapp/screens/add_product.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -16,7 +17,7 @@ class LeftDrawer extends StatelessWidget {
             child: const Column(
               children: [
                 Text(
-                  "Mental Health Tracker",
+                  "Mango E-Commerce",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 24,
@@ -25,7 +26,7 @@ class LeftDrawer extends StatelessWidget {
                   ),
                 ),
                 Padding(padding: EdgeInsets.all(8)),
-                Text("Ayo jaga kesehatan mentalmu setiap hari disini!",
+                Text("Where every click is a win",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 15,
@@ -37,25 +38,25 @@ class LeftDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.home_outlined),
-            title: const Text('Halaman Utama'),
+            title: const Text('Home Page'),
             // Bagian redirection ke MyHomePage
             onTap: () {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Home(),
+                    builder: (context) => HomePage(),
                   ));
             },
           ),
           ListTile(
-            leading: const Icon(Icons.mood),
-            title: const Text('Tambah Mood'),
-            // Bagian redirection ke MoodEntryFormPage
+            leading: const Icon(Icons.add),
+            title: const Text('Add a Product'),
             onTap: () {
-              /*
-      TODO: Buatlah routing ke MoodEntryFormPage di sini,
-      setelah halaman MoodEntryFormPage sudah dibuat.
-      */
+              Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const AddProductPage(),
+                  ));
             },
           ),
         ],
